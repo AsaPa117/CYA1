@@ -1,0 +1,61 @@
+Personal Lecture Notes from Section 0
+
+Intro & OSI Layer
+
+Chapt 0
+
+New Topics for (N10-009) Exam
+ - New Cloud Concepts (cloud tech)
+ - Network Security Enhancements (advance sec group/list/zta)
+ - Modern Network Environment
+
+Chapt1
+OSI MODEL (7 layer): Representation of how network work
+Scope: Basic Local Area Network
+
+Ethernet Frame: travels through each individual system. (think of it as register that need decoding)
+Consist of: Preamble, SFD, SRCE/DEST MAC ADDR, ETHER type/length, payload data, FCS
+
+Layers
+
+Physical(1) 
+ - Deal with specific hardware/device
+ - Act as Network Card: Takes Preamble from EF. EF act as warning sign and warns Network card of an incoming frame
+ - Takes FCS from frame and check if the data that was sent is same as it receive. 
+ - Remove FCS and Preamble from frame
+
+Data Link(2)
+ - Check if the EF is addressed for Data Link base on Mac Address (unique 48 bit value in every network card wireless or wired)
+ - look at Destination MAC address in EF and compare with Datalink address
+ - Delete EF if address doesn't match
+ - MAC Address: Physical address burned into every network card(use for local area network)
+ - Destination MAC comes with Source MAC and can be use to sent it back to sender. (Doesn't delete)
+ - IP PACKET: EF with Dest/SRCE MAC and previous parts remove
+
+
+Network(3)
+ - Look at IP addresses. (used for large distributed network such as internet)
+ - Process similar to data link. (SRCE/DEST IP address)
+
+
+Transport(4)
+ - Assemble and disassemble different pieces of data
+ - Data is generally big. (each EF can only holds 1500 bytes of data)
+ - Send huge data and chop the data into chunks(1500 byte chunk) or reassemble chunks into one whole
+
+Session(5)
+ - Establish connection between current host to another host. (ex: employee & client email)
+ - if the IP address is in the right computer, the port number (in packet) gets the data into right application
+ - Grabs SRCE/DEST Port number
+
+
+Presentation(6)
+ - Check if the data gets to the right application but also check if data is in correct format that the application can view
+ - Isn't significant currently since applications now are able to read every different format of data.
+
+Application(7)
+ -  Built in application interface or API. Gives ability to talk to other network. 
+
+***Focus on what each layer does for Exam****
+
+
