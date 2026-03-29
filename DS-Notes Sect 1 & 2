@@ -1,38 +1,44 @@
-Understanding Ports and Services & IP types
+Frame & MAC Address
 
-Port Number: Ensure that the payload of a packet is received to the application/service that its specifically for and is processed by the receiving end of a transmission
+Chapt 2
 
-Port Info
- - 16-bit unsigned number (ranges from 0-65535)
- - Port number and service name are used to differentiate between services that run on protocols
- - Identifies to a network the specific service, protocol or application that is to receive and process an incoming message. 
+NIC: Network Interface Card
+ - Integrated into every computer
+ - Connects to hub
 
-List of Protocols
- - TCP (Transmission Control Protocol, transport layer protocols)
- - UDP (User Datagram Protocol (UDP) 
- - DCCP (Datagram Congestion Control Protocol)
- - Stream Control Transmission Control
-
-Port numbers are divided into three groups
- - Well known, Registered, & Dynamic Port Numbers
-
-WellKnown (AKA system Port): numbered 0 to 1023. Numbers are assigned to legacy protocols and services and proprietary protocols. ex: HTTP, SQL, DNS
-
-Registered: numbered to 1024 - 49151. Reserved to specific protocols and applications. 
-
-Dynamic Port (AKA Ephemeral): numbered to 4912-65535. Not permanently assigned to any services and are commonly used as source port numbers for outgoing connections. can be used by virtually for any protocol or service 
-
-Socket (occurs in transport ): Port numbers are appended to logical address (IP address) of incoming messages for destination address. 
-
-***Understand each list of Protocol, it may show in exam**** (Look at CommonPorts and Services list on Sect2,7)
-
-**most important protocol to know: FTP, SSH, TelNet, DNS, HTTP, HTTPS ***
-
-**Know IANA for TCP/UDP). 
+HUB: Act as interface to allow alot of computer to interconnect to share resources (Ex: LAN server)
 
 
-********************************************************************************************************
+GOAL
+ - How are data move from one computer to another in a local area network?
 
-Transport Protocol
- - TCP(basic and wildly used protocol standard for WAN and Internet): Makes it possible for various software and hardware to transmit messages on a network and ensure security. 
- - User Datagram protocol
+
+Data is not sent through long continuous stream but sent through discrete chunks 
+
+Frame and Packet are similar but different
+
+Frame ex: 01001000100. 
+Packetized data: Chunk of frame
+
+Frame are generated in NIC. 
+ - Data is generated in application. 
+ - Data is then sent into network card
+ - NC creates the frame and sent into network
+ - Alternately NIC takes frame, data is pulled, and sent into a software. Frame is deleted in NIC.
+ - Physical and Data Link occur in NIC. 
+
+MAC address uses hexadecimal and use values of 0-9 and A-F
+
+Chapt 3 
+
+GOAL: How does frame get to the right computer
+
+Repeater: A Hub. Takes signal from one of a port and then recreate multiple copies of frame and sent copied frame and then sent it out to all other connected cable
+
+Using PowerShell: Physical address = MAC address
+
+Address is broken into two halves: OEM and Unique ID
+
+Every Network card needs a unique MAC address.
+
+Part of EF is a CRC (Cyclic Redundancy Check): Verify if data is good and if not sent it back to hub
