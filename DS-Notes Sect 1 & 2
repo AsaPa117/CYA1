@@ -1,0 +1,38 @@
+Understanding Ports and Services & IP types
+
+Port Number: Ensure that the payload of a packet is received to the application/service that its specifically for and is processed by the receiving end of a transmission
+
+Port Info
+ - 16-bit unsigned number (ranges from 0-65535)
+ - Port number and service name are used to differentiate between services that run on protocols
+ - Identifies to a network the specific service, protocol or application that is to receive and process an incoming message. 
+
+List of Protocols
+ - TCP (Transmission Control Protocol, transport layer protocols)
+ - UDP (User Datagram Protocol (UDP) 
+ - DCCP (Datagram Congestion Control Protocol)
+ - Stream Control Transmission Control
+
+Port numbers are divided into three groups
+ - Well known, Registered, & Dynamic Port Numbers
+
+WellKnown (AKA system Port): numbered 0 to 1023. Numbers are assigned to legacy protocols and services and proprietary protocols. ex: HTTP, SQL, DNS
+
+Registered: numbered to 1024 - 49151. Reserved to specific protocols and applications. 
+
+Dynamic Port (AKA Ephemeral): numbered to 4912-65535. Not permanently assigned to any services and are commonly used as source port numbers for outgoing connections. can be used by virtually for any protocol or service 
+
+Socket (occurs in transport ): Port numbers are appended to logical address (IP address) of incoming messages for destination address. 
+
+***Understand each list of Protocol, it may show in exam**** (Look at CommonPorts and Services list on Sect2,7)
+
+**most important protocol to know: FTP, SSH, TelNet, DNS, HTTP, HTTPS ***
+
+**Know IANA for TCP/UDP). 
+
+
+********************************************************************************************************
+
+Transport Protocol
+ - TCP(basic and wildly used protocol standard for WAN and Internet): Makes it possible for various software and hardware to transmit messages on a network and ensure security. 
+ - User Datagram protocol
