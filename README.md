@@ -9,3 +9,5 @@ My goal is to become a Network Engineer with an understanding of IT infrastructu
 
 Summary: 
 My deliverables include my enrollment, progress, and participation in the CompTIA Network+ Certification. The course itself includes content, practice exams, and quizzes covering networking, its implementation, network operations, security, and, most importantly, troubleshooting. Although I still need to look for a suitable lab to gain hands-on experience, the program includes content that helps build foundational knowledge. 
+
+*Note: DC in files mean Deliverable Specific Content*
